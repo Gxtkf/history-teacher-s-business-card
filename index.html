@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пчелинцева Марина Геннадьевна — Учитель истории</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #0b1f3a, #102b52, #0d2240);
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 90px 20px 60px;
+            border-bottom: 3px solid #d4af37;
+            position: relative;
+        }
+
+        /* Декоративный орнамент */
+        header::before {
+            content: "✶ ✶ ✶";
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #d4af37;
+            letter-spacing: 15px;
+            font-size: 22px;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            color: #d4af37;
+        }
+
+        header p {
+            margin-top: 15px;
+            font-size: 20px;
+            color: #ffffff;
+        }
+
+        .photo {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .photo img {
+            width: 240px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 4px solid #d4af37;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .card {
+            background: #122b4d;
+            border-left: 6px solid #d4af37;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #d4af37;
+        }
+
+        .info p {
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 32px;
+            background: #d4af37;
+            color: #0b1f3a;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: #f0c95a; }
+
+        /* Пергаментный блок достижений */
+        .parchment {
+            background: linear-gradient(135deg, #f8f1d4, #f1e2b8);
+            color: #3b2a0f;
+            border-left: 6px solid #d4af37;
+        }
+
+        .parchment h2 { color: #7a5c1b; }
+
+        .parchment ul { padding-left: 20px; }
+        .parchment li { margin-bottom: 12px; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 2px solid #d4af37;
+            color: #d4af37;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 30px; }
+            .photo img { width: 180px; height: 230px; }
+            .card { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Пчелинцева Марина Геннадьевна</h1>
+    <p>Учитель истории · Педагогический стаж — более 30 лет</p>
+
+    <div class="photo">
+        <img src="photo.jpg" alt="Пчелинцева Марина Геннадьевна">
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Визитная карточка педагога</h2>
+        <div class="info">
+            <p><strong>Должность:</strong> учитель истории</p>
+            <p><strong>Стаж работы:</strong> более 30 лет</p>
+            <p><strong>Профессиональное кредо:</strong> развитие исторического мышления, формирование гражданской позиции и уважения к культурному наследию России.</p>
+            <p><strong>Профессиональные интересы:</strong> современные образовательные технологии, работа с одарёнными детьми, проектная и исследовательская деятельность.</p>
+            <p><strong>Личные интересы:</strong> занятия йогой, чтение исторической и художественной литературы, постоянное самообразование.</p>
+        </div>
+        <a href="#contact" class="btn">Связаться со мной</a>
+    </div>
+
+    <div class="card parchment">
+        <h2>Профессиональные достижения</h2>
+        <ul>
+            <li>Почётный работник общего образования Российской Федерации</li>
+            <li>Награждена почётной грамотой Министерства образования и науки Амурской области</li>
+            <li>Призёр конкурса «Учитель года Амурской области – 2001»</li>
+            <li>Лауреат Всероссийского портала «Доска почёта учителей России»</li>
+            <li>Включена в энциклопедию «Лучшие люди России»</li>
+            <li>Призёр Всероссийского конкурса педагогического мастерства «Урок – 2020»</li>
+            <li>Победитель Всероссийского конкурса «Педагогические инновации» (программа «Моя вершина»)</li>
+        </ul>
+    </div>
+
+    <div class="card" id="contact">
+        <h2>Контактная информация</h2>
+        <p>Email: example@mail.ru</p>
+        <p>Телефон: +7 (900) 000‑00‑00</p>
+        <p>Амурская область</p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Пчелинцева Марина Геннадьевна — Учитель истории
+</footer>
+
+<script>
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
